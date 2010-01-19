@@ -1099,6 +1099,7 @@ static void set_mode(const struct mode_info *info, int reversed,
 		else
 			mode->c_iflag &= ~IXANY;
 	}
+#ifndef __nucleos__
 	else if (TABDLY && info == &mode_info[IDX_tabs]) {
 		if (reversed)
 			mode->c_oflag = (mode->c_oflag & ~TABDLY) | TAB3;
@@ -1123,7 +1124,9 @@ static void set_mode(const struct mode_info *info, int reversed,
 			mode->c_iflag |= IUCLC;
 			mode->c_oflag |= OLCUC;
 		}
-	} else if (info == &mode_info[IDX_crt]) {
+	}
+#endif /* __nucleos__ */
+	else if (info == &mode_info[IDX_crt]) {
 		mode->c_lflag |= ECHOE | ECHOCTL | ECHOKE;
 	} else if (info == &mode_info[IDX_dec]) {
 		mode->c_cc[VINTR] = 3; /* ^C */

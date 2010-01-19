@@ -27,8 +27,11 @@ int fsync_main(int argc UNUSED_PARAM, char **argv)
 
 	status = EXIT_SUCCESS;
 	do {
+#ifndef __nucleos__
 		int fd = open3_or_warn(*argv, O_NOATIME | O_NOCTTY | O_RDONLY, 0);
-
+#else
+		int fd = open3_or_warn(*argv, O_NOCTTY | O_RDONLY, 0);
+#endif
 		if (fd == -1) {
 			status = EXIT_FAILURE;
 			continue;

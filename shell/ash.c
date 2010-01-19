@@ -8863,8 +8863,9 @@ static int timescmd(int, char **) FAST_FUNC;
 static int trapcmd(int, char **) FAST_FUNC;
 static int umaskcmd(int, char **) FAST_FUNC;
 static int unsetcmd(int, char **) FAST_FUNC;
+#ifndef __nucleos__
 static int ulimitcmd(int, char **) FAST_FUNC;
-
+#endif /*__nucleos__ */
 #define BUILTIN_NOSPEC          "0"
 #define BUILTIN_SPECIAL         "1"
 #define BUILTIN_REGULAR         "2"
@@ -8953,8 +8954,11 @@ static const struct builtincmd builtintab[] = {
 	{ BUILTIN_SPEC_REG      "trap"    , trapcmd    },
 	{ BUILTIN_REGULAR       "true"    , truecmd    },
 	{ BUILTIN_NOSPEC        "type"    , typecmd    },
+#ifndef __nucleos__
 	{ BUILTIN_NOSPEC        "ulimit"  , ulimitcmd  },
+#endif /* __nucleos__ */
 	{ BUILTIN_REGULAR       "umask"   , umaskcmd   },
+	{ BUILTIN_REGULAR       "test", testcmd },
 #if ENABLE_ASH_ALIAS
 	{ BUILTIN_REGULAR       "unalias" , unaliascmd },
 #endif
@@ -12685,12 +12689,6 @@ umaskcmd(int argc UNUSED_PARAM, char **argv)
 		}
 	}
 	return 0;
-}
-
-static int FAST_FUNC
-ulimitcmd(int argc UNUSED_PARAM, char **argv)
-{
-	return shell_builtin_ulimit(argv);
 }
 
 /* ============ main() and helpers */

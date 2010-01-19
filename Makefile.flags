@@ -97,7 +97,15 @@ CFLAGS += $(strip $(subst ",,$(CONFIG_EXTRA_CFLAGS)))
 #"))
 endif
 
+ifndef KERN_NUCLEOS
 LDLIBS += m crypt
+else
+LDLIBS += m
+endif
+
+ifdef KERN_NUCLEOS
+CPPFLAGS += -D__nucleos__
+endif
 
 ifeq ($(CONFIG_PAM),y)
 LDLIBS += pam pam_misc

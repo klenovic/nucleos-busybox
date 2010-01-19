@@ -238,6 +238,10 @@ typedef uint32_t bb__aliased_uint32_t FIX_ALIASING;
 # define HAVE_SYS_STATFS_H 1
 #endif
 
+#ifdef __nucleos__
+# undef HAVE_MNTENT_H
+#endif
+
 /*----- Kernel versioning ------------------------------------*/
 
 #define KERNEL_VERSION(a,b,c) (((a) << 16) + ((b) << 8) + (c))
@@ -363,6 +367,9 @@ typedef unsigned smalluint;
 # undef HAVE_STRCHRNUL
 #endif
 
+#if defined(__nucleos__)
+# undef HAVE_FDPRINTF
+#endif
 /*
  * Now, define prototypes for all the functions defined in platform.c
  * These must come after all the HAVE_* macros are defined (or not)

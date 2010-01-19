@@ -1,0 +1,7 @@
+-= Build Busybox for Nucleos =-
+
+1) Get the default configuration
+	cp config/nucleos_deconfig .config
+
+2. Build and install
+	make KERN_NUCLEOS=1 CROSS_COMPILE=path/to/crosstool all install
