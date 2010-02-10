@@ -114,16 +114,16 @@ been enabled, more detailed usage information will also be available.</p>
 <h1><a name="commands">COMMANDS</a></h1>
 <p>Currently available applets include:</p>
 <pre>
-        [, [[, ar, ash, awk, bunzip2, bzcat, bzip2, cat, chgrp, chmod,
-        chown, chroot, cksum, clear, cmp, comm, cp, cpio, cut, date, dd, df,
-        diff, dirname, dos2unix, echo, ed, egrep, env, expand, expr, false,
-        fgrep, find, fold, fsync, grep, gunzip, gzip, head, install, kill,
-        killall, less, ln, ls, md5sum, mkdir, mkfifo, mknod, mktemp, mv,
-        nohup, od, patch, printenv, printf, pwd, readlink, realpath, rm,
-        rmdir, sed, seq, sh, sha1sum, sha256sum, sha512sum, sleep, sort,
-        split, stty, sum, sync, tac, tail, tar, tee, test, touch, tr, true,
-        tty, uname, unexpand, uniq, unix2dos, unzip, usleep, uudecode,
-        uuencode, vi, wc, which, xargs, zcat</pre>
+        [, [[, ar, ash, awk, bbconfig, bunzip2, bzcat, bzip2, cat, chgrp,
+        chmod, chown, chroot, cksum, clear, cmp, comm, cp, cpio, cut, date,
+        dd, df, diff, dirname, dos2unix, echo, ed, egrep, env, expand, expr,
+        false, fgrep, find, fold, fsync, grep, gunzip, gzip, head, install,
+        kill, killall, length, less, ln, ls, md5sum, mkdir, mkfifo, mknod,
+        mktemp, more, mv, nohup, od, patch, printenv, printf, pwd, readlink,
+        realpath, rm, rmdir, sed, seq, sh, sha1sum, sha256sum, sha512sum,
+        sleep, sort, split, strings, stty, sum, sync, tac, tail, tar, tee,
+        test, touch, tr, true, tty, uname, unexpand, uniq, unix2dos, unzip,
+        usleep, uudecode, uuencode, vi, wc, which, xargs, zcat</pre>
 <p>
 </p>
 <hr />
@@ -139,6 +139,12 @@ been enabled, more detailed usage information will also be available.</p>
 
 <dd>
 <p>awk [OPTIONS] [AWK_PROGRAM] [FILE]...</p>
+</dd>
+</li>
+<dt><strong><a name="bbconfig" class="item"><strong>bbconfig</strong></a></strong>
+
+<dd>
+<p>bbconfig</p>
 </dd>
 </li>
 <dt><strong><a name="bunzip2" class="item"><strong>bunzip2</strong></a></strong>
@@ -364,6 +370,12 @@ been enabled, more detailed usage information will also be available.</p>
 <p>killall [-l] [-q] [-SIG] process-name...</p>
 </dd>
 </li>
+<dt><strong><a name="length" class="item"><strong>length</strong></a></strong>
+
+<dd>
+<p>length STRING</p>
+</dd>
+</li>
 <dt><strong><a name="less" class="item"><strong>less</strong></a></strong>
 
 <dd>
@@ -410,6 +422,12 @@ been enabled, more detailed usage information will also be available.</p>
 
 <dd>
 <p>mktemp [-dt] [-p DIR] [TEMPLATE]</p>
+</dd>
+</li>
+<dt><strong><a name="more" class="item"><strong>more</strong></a></strong>
+
+<dd>
+<p>more [FILE]...</p>
 </dd>
 </li>
 <dt><strong><a name="mv" class="item"><strong>mv</strong></a></strong>
@@ -525,6 +543,12 @@ or: mv [OPTIONS] SOURCE... DIRECTORY</p>
 
 <dd>
 <p>split [OPTIONS] [INPUT [PREFIX]]</p>
+</dd>
+</li>
+<dt><strong><a name="strings" class="item"><strong>strings</strong></a></strong>
+
+<dd>
+<p>strings [-afo] [-n LEN] [FILE]...</p>
 </dd>
 </li>
 <dt><strong><a name="stty" class="item"><strong>stty</strong></a></strong>
