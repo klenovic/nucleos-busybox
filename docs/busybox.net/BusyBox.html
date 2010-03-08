@@ -114,16 +114,17 @@ been enabled, more detailed usage information will also be available.</p>
 <h1><a name="commands">COMMANDS</a></h1>
 <p>Currently available applets include:</p>
 <pre>
-        [, [[, ar, ash, awk, bbconfig, bunzip2, bzcat, bzip2, cat, chgrp,
-        chmod, chown, chroot, cksum, clear, cmp, comm, cp, cpio, cut, date,
-        dd, df, diff, dirname, dos2unix, echo, ed, egrep, env, expand, expr,
-        false, fgrep, find, fold, fsync, grep, gunzip, gzip, head, install,
-        kill, killall, length, less, ln, ls, md5sum, mkdir, mkfifo, mknod,
-        mktemp, more, mv, nohup, od, patch, printenv, printf, pwd, readlink,
-        realpath, rm, rmdir, sed, seq, sh, sha1sum, sha256sum, sha512sum,
-        sleep, sort, split, strings, stty, sum, sync, tac, tail, tar, tee,
-        test, touch, tr, true, tty, uname, unexpand, uniq, unix2dos, unzip,
-        usleep, uudecode, uuencode, vi, wc, which, xargs, zcat</pre>
+        [, [[, ar, ash, awk, basename, bbconfig, bunzip2, bzcat, bzip2, cal,
+        cat, catv, chgrp, chmod, chown, chroot, cksum, clear, cmp, comm, cp,
+        cpio, cut, date, dd, df, diff, dirname, dos2unix, echo, ed, egrep,
+        env, expand, expr, false, fgrep, find, fold, fsync, grep, gunzip,
+        gzip, head, install, kill, killall, length, less, ln, ls, md5sum,
+        mkdir, mkfifo, mknod, mktemp, more, mv, nohup, od, patch, printenv,
+        printf, pwd, readlink, realpath, rm, rmdir, sed, seq, sh, sha1sum,
+        sha256sum, sha512sum, sleep, sort, split, strings, stty, sum, sync,
+        tac, tail, tar, tee, test, touch, tr, true, tty, uname, unexpand,
+        uniq, unix2dos, unzip, usleep, uudecode, uuencode, vi, wc, which,
+        xargs, yes, zcat</pre>
 <p>
 </p>
 <hr />
@@ -141,6 +142,12 @@ been enabled, more detailed usage information will also be available.</p>
 <p>awk [OPTIONS] [AWK_PROGRAM] [FILE]...</p>
 </dd>
 </li>
+<dt><strong><a name="basename" class="item"><strong>basename</strong></a></strong>
+
+<dd>
+<p>basename FILE [SUFFIX]</p>
+</dd>
+</li>
 <dt><strong><a name="bbconfig" class="item"><strong>bbconfig</strong></a></strong>
 
 <dd>
@@ -150,7 +157,7 @@ been enabled, more detailed usage information will also be available.</p>
 <dt><strong><a name="bunzip2" class="item"><strong>bunzip2</strong></a></strong>
 
 <dd>
-<p>bunzip2 [OPTIONS] [FILE]</p>
+<p>bunzip2 [OPTIONS] [FILE]...</p>
 </dd>
 </li>
 <dt><strong><a name="bzcat" class="item"><strong>bzcat</strong></a></strong>
@@ -165,10 +172,22 @@ been enabled, more detailed usage information will also be available.</p>
 <p>bzip2 [OPTIONS] [FILE]...</p>
 </dd>
 </li>
+<dt><strong><a name="cal" class="item"><strong>cal</strong></a></strong>
+
+<dd>
+<p>cal [-jy] [[MONTH] YEAR]</p>
+</dd>
+</li>
 <dt><strong><a name="cat" class="item"><strong>cat</strong></a></strong>
 
 <dd>
 <p>cat [-u] [FILE]...</p>
+</dd>
+</li>
+<dt><strong><a name="catv" class="item"><strong>catv</strong></a></strong>
+
+<dd>
+<p>catv [-etv] [FILE]...</p>
 </dd>
 </li>
 <dt><strong><a name="chgrp" class="item"><strong>chgrp</strong></a></strong>
@@ -192,7 +211,7 @@ been enabled, more detailed usage information will also be available.</p>
 <dt><strong><a name="chroot" class="item"><strong>chroot</strong></a></strong>
 
 <dd>
-<p>chroot NEWROOT [PROG [ARGS]]</p>
+<p>chroot NEWROOT [PROG ARGS]</p>
 </dd>
 </li>
 <dt><strong><a name="cksum" class="item"><strong>cksum</strong></a></strong>
@@ -246,14 +265,14 @@ been enabled, more detailed usage information will also be available.</p>
 <dt><strong><a name="dd" class="item"><strong>dd</strong></a></strong>
 
 <dd>
-<p><table cellspacing="0" cellpadding="0"><tr><td>dd [if=FILE] [of=FILE] [bs=N] [count=N] [skip=N]
-<tr><td><td>[seek=N]</table></p>
+<p><table cellspacing="0" cellpadding="0"><tr><td>dd [if=FILE] [of=FILE] [ibs=N] [obs=N] [bs=N] [count=N] [skip=N]
+<tr><td><td>[seek=N] [conv=notrunc|noerror|sync|fsync]</table></p>
 </dd>
 </li>
 <dt><strong><a name="df" class="item"><strong>df</strong></a></strong>
 
 <dd>
-<p>df [-Pk] [FILESYSTEM...]</p>
+<p>df [-Pkmhai] [-B SIZE] [FILESYSTEM]...</p>
 </dd>
 </li>
 <dt><strong><a name="diff" class="item"><strong>diff</strong></a></strong>
@@ -277,7 +296,7 @@ been enabled, more detailed usage information will also be available.</p>
 <dt><strong><a name="echo" class="item"><strong>echo</strong></a></strong>
 
 <dd>
-<p>echo [-neE] [ARG...]</p>
+<p>echo [-neE] [ARG]...</p>
 </dd>
 </li>
 <dt><strong><a name="ed" class="item"><strong>ed</strong></a></strong>
@@ -289,7 +308,7 @@ been enabled, more detailed usage information will also be available.</p>
 <dt><strong><a name="env" class="item"><strong>env</strong></a></strong>
 
 <dd>
-<p>env [-iu] [-] [name=value]... [PROG [ARGS]]</p>
+<p>env [-iu] [-] [name=value]... [PROG ARGS]</p>
 </dd>
 </li>
 <dt><strong><a name="expand" class="item"><strong>expand</strong></a></strong>
@@ -313,13 +332,13 @@ been enabled, more detailed usage information will also be available.</p>
 <dt><strong><a name="find" class="item"><strong>find</strong></a></strong>
 
 <dd>
-<p>find [PATH...] [EXPRESSION]</p>
+<p>find [PATH]... [EXPRESSION]</p>
 </dd>
 </li>
 <dt><strong><a name="fold" class="item"><strong>fold</strong></a></strong>
 
 <dd>
-<p>fold [-bs] [-w WIDTH] [FILE]</p>
+<p>fold [-bs] [-w WIDTH] [FILE]...</p>
 </dd>
 </li>
 <dt><strong><a name="fsync" class="item"><strong>fsync</strong></a></strong>
@@ -331,7 +350,7 @@ been enabled, more detailed usage information will also be available.</p>
 <dt><strong><a name="grep" class="item"><strong>grep</strong></a></strong>
 
 <dd>
-<p>grep [-HhrilLnqvsoweFEABC] PATTERN [FILE]...</p>
+<p>grep [-HhnlLoqvsriwFE] [-m N] [-A/B/C N] PATTERN/-e PATTERN.../-f FILE [FILE]...</p>
 </dd>
 </li>
 <dt><strong><a name="gunzip" class="item"><strong>gunzip</strong></a></strong>
@@ -355,7 +374,7 @@ been enabled, more detailed usage information will also be available.</p>
 <dt><strong><a name="install" class="item"><strong>install</strong></a></strong>
 
 <dd>
-<p>install [-cdDsp] [-o USER] [-g GRP] [-m MODE] [source] dest|directory</p>
+<p>install [-cdDsp] [-o USER] [-g GRP] [-m MODE] [SOURCE]... DEST</p>
 </dd>
 </li>
 <dt><strong><a name="kill" class="item"><strong>kill</strong></a></strong>
@@ -367,7 +386,7 @@ been enabled, more detailed usage information will also be available.</p>
 <dt><strong><a name="killall" class="item"><strong>killall</strong></a></strong>
 
 <dd>
-<p>killall [-l] [-q] [-SIG] process-name...</p>
+<p>killall [-l] [-q] [-SIG] PROCESS_NAME...</p>
 </dd>
 </li>
 <dt><strong><a name="length" class="item"><strong>length</strong></a></strong>
@@ -391,13 +410,14 @@ been enabled, more detailed usage information will also be available.</p>
 <dt><strong><a name="ls" class="item"><strong>ls</strong></a></strong>
 
 <dd>
-<p>ls [-1AacCdeFilnpLRrSsTtuvwxXk] [FILE]...</p>
+<p>ls [-1AacCdeFilnpLRrSsTtuvwxXhk] [FILE]...</p>
 </dd>
 </li>
 <dt><strong><a name="md5sum" class="item"><strong>md5sum</strong></a></strong>
 
 <dd>
-<p>md5sum [OPTIONS] [FILE]...</p>
+<p>md5sum [OPTIONS] [FILE]...
+   or: md5sum [OPTIONS] -c [FILE]</p>
 </dd>
 </li>
 <dt><strong><a name="mkdir" class="item"><strong>mkdir</strong></a></strong>
@@ -440,7 +460,7 @@ or: mv [OPTIONS] SOURCE... DIRECTORY</p>
 <dt><strong><a name="nohup" class="item"><strong>nohup</strong></a></strong>
 
 <dd>
-<p>nohup PROG [ARGS]</p>
+<p>nohup PROG ARGS</p>
 </dd>
 </li>
 <dt><strong><a name="od" class="item"><strong>od</strong></a></strong>
@@ -458,13 +478,13 @@ or: mv [OPTIONS] SOURCE... DIRECTORY</p>
 <dt><strong><a name="printenv" class="item"><strong>printenv</strong></a></strong>
 
 <dd>
-<p>printenv [VARIABLE...]</p>
+<p>printenv [VARIABLE]...</p>
 </dd>
 </li>
 <dt><strong><a name="printf" class="item"><strong>printf</strong></a></strong>
 
 <dd>
-<p>printf FORMAT [ARGUMENT...]</p>
+<p>printf FORMAT [ARGUMENT]...</p>
 </dd>
 </li>
 <dt><strong><a name="pwd" class="item"><strong>pwd</strong></a></strong>
@@ -476,13 +496,13 @@ or: mv [OPTIONS] SOURCE... DIRECTORY</p>
 <dt><strong><a name="readlink" class="item"><strong>readlink</strong></a></strong>
 
 <dd>
-<p>readlink FILE</p>
+<p>readlink [-fnv] FILE</p>
 </dd>
 </li>
 <dt><strong><a name="realpath" class="item"><strong>realpath</strong></a></strong>
 
 <dd>
-<p>realpath pathname...</p>
+<p>realpath FILE...</p>
 </dd>
 </li>
 <dt><strong><a name="rm" class="item"><strong>rm</strong></a></strong>
@@ -512,19 +532,22 @@ or: mv [OPTIONS] SOURCE... DIRECTORY</p>
 <dt><strong><a name="sha1sum" class="item"><strong>sha1sum</strong></a></strong>
 
 <dd>
-<p>sha1sum [OPTIONS] [FILE]...</p>
+<p>sha1sum [OPTIONS] [FILE]...
+   or: sha1sum [OPTIONS] -c [FILE]</p>
 </dd>
 </li>
 <dt><strong><a name="sha256sum" class="item"><strong>sha256sum</strong></a></strong>
 
 <dd>
-<p>sha256sum [OPTIONS] [FILE]...</p>
+<p>sha256sum [OPTIONS] [FILE]...
+   or: sha256sum [OPTIONS] -c [FILE]</p>
 </dd>
 </li>
 <dt><strong><a name="sha512sum" class="item"><strong>sha512sum</strong></a></strong>
 
 <dd>
-<p>sha512sum [OPTIONS] [FILE]...</p>
+<p>sha512sum [OPTIONS] [FILE]...
+   or: sha512sum [OPTIONS] -c [FILE]</p>
 </dd>
 </li>
 <dt><strong><a name="sleep" class="item"><strong>sleep</strong></a></strong>
@@ -692,7 +715,13 @@ or: mv [OPTIONS] SOURCE... DIRECTORY</p>
 <dt><strong><a name="xargs" class="item"><strong>xargs</strong></a></strong>
 
 <dd>
-<p>xargs [OPTIONS] [PROG [ARGS]]</p>
+<p>xargs [OPTIONS] [PROG ARGS]</p>
+</dd>
+</li>
+<dt><strong><a name="yes" class="item"><strong>yes</strong></a></strong>
+
+<dd>
+<p>yes [OPTIONS] [STRING]</p>
 </dd>
 </li>
 <dt><strong><a name="zcat" class="item"><strong>zcat</strong></a></strong>
