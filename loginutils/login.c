@@ -259,9 +259,9 @@ int login_main(int argc UNUSED_PARAM, char **argv)
 
 	/* Was breaking "login <username>" from shell command line: */
 	/*bb_setpgrp();*/
-
+#ifndef __nucleos__
 	openlog(applet_name, LOG_PID | LOG_CONS, LOG_AUTH);
-
+#endif
 	while (1) {
 		/* flush away any type-ahead (as getty does) */
 		ioctl(0, TCFLSH, TCIFLUSH);
@@ -362,8 +362,10 @@ int login_main(int argc UNUSED_PARAM, char **argv)
 		/* TODO: doesn't sound like correct English phrase to me */
 		puts("Login incorrect");
 		if (++count == 3) {
+#ifndef __nucleos__
 			syslog(LOG_WARNING, "invalid password for '%s'%s",
 						username, fromhost);
+#endif
 			return EXIT_FAILURE;
 		}
 		username[0] = '\0';
@@ -397,10 +399,10 @@ int login_main(int argc UNUSED_PARAM, char **argv)
 			pw);
 
 	motd();
-
+#ifndef __nucleos__
 	if (pw->pw_uid == 0)
 		syslog(LOG_INFO, "root login%s", fromhost);
-
+#endif
 	/* well, a simple setexeccon() here would do the job as well,
 	 * but let's play the game for now */
 	IF_SELINUX(set_current_security_context(user_sid);)

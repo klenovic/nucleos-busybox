@@ -116,15 +116,15 @@ been enabled, more detailed usage information will also be available.</p>
 <pre>
         [, [[, ar, ash, awk, basename, bbconfig, bunzip2, bzcat, bzip2, cal,
         cat, catv, chgrp, chmod, chown, chroot, cksum, clear, cmp, comm, cp,
-        cpio, cut, date, dd, df, diff, dirname, dos2unix, echo, ed, egrep,
-        env, expand, expr, false, fgrep, find, fold, fsync, grep, gunzip,
-        gzip, head, install, kill, killall, length, less, ln, ls, md5sum,
+        cpio, cut, date, dd, diff, dirname, dos2unix, echo, ed, egrep, env,
+        expand, expr, false, fgrep, find, fold, fsync, grep, gunzip, gzip,
+        head, install, kill, killall, length, less, ln, login, ls, md5sum,
         mkdir, mkfifo, mknod, mktemp, more, mv, nohup, od, patch, printenv,
         printf, pwd, readlink, realpath, rm, rmdir, sed, seq, sh, sha1sum,
         sha256sum, sha512sum, sleep, sort, split, strings, stty, sum, sync,
         tac, tail, tar, tee, test, touch, tr, true, tty, uname, unexpand,
         uniq, unix2dos, unzip, usleep, uudecode, uuencode, vi, wc, which,
-        xargs, yes, zcat</pre>
+        whoami, xargs, yes, zcat</pre>
 <p>
 </p>
 <hr />
@@ -269,12 +269,6 @@ been enabled, more detailed usage information will also be available.</p>
 <tr><td><td>[seek=N] [conv=notrunc|noerror|sync|fsync]</table></p>
 </dd>
 </li>
-<dt><strong><a name="df" class="item"><strong>df</strong></a></strong>
-
-<dd>
-<p>df [-Pkmhai] [-B SIZE] [FILESYSTEM]...</p>
-</dd>
-</li>
 <dt><strong><a name="diff" class="item"><strong>diff</strong></a></strong>
 
 <dd>
@@ -405,6 +399,12 @@ been enabled, more detailed usage information will also be available.</p>
 
 <dd>
 <p>ln [OPTIONS] TARGET... LINK|DIR</p>
+</dd>
+</li>
+<dt><strong><a name="login" class="item"><strong>login</strong></a></strong>
+
+<dd>
+<p>login [-p] [-h HOST] [[-f] USER]</p>
 </dd>
 </li>
 <dt><strong><a name="ls" class="item"><strong>ls</strong></a></strong>
@@ -710,6 +710,12 @@ or: mv [OPTIONS] SOURCE... DIRECTORY</p>
 
 <dd>
 <p>which [COMMAND]...</p>
+</dd>
+</li>
+<dt><strong><a name="whoami" class="item"><strong>whoami</strong></a></strong>
+
+<dd>
+<p>whoami</p>
 </dd>
 </li>
 <dt><strong><a name="xargs" class="item"><strong>xargs</strong></a></strong>
