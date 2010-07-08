@@ -8958,7 +8958,6 @@ static const struct builtincmd builtintab[] = {
 	{ BUILTIN_NOSPEC        "ulimit"  , ulimitcmd  },
 #endif /* __nucleos__ */
 	{ BUILTIN_REGULAR       "umask"   , umaskcmd   },
-	{ BUILTIN_REGULAR       "test", testcmd },
 #if ENABLE_ASH_ALIAS
 	{ BUILTIN_REGULAR       "unalias" , unaliascmd },
 #endif

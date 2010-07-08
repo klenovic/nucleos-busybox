@@ -187,7 +187,7 @@ config LOGIN
 	bool "login"
 	default y
 	select FEATURE_SUID
-	select FEATURE_SYSLOG
+	select FEATURE_SYSLOG if !KERNEL_NUCLEOS
 	help
 	  login is used when signing onto a system.
 

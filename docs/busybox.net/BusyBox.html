@@ -117,14 +117,15 @@ been enabled, more detailed usage information will also be available.</p>
         [, [[, ar, ash, awk, basename, bbconfig, bunzip2, bzcat, bzip2, cal,
         cat, catv, chgrp, chmod, chown, chroot, cksum, clear, cmp, comm, cp,
         cpio, cut, date, dd, diff, dirname, dos2unix, echo, ed, egrep, env,
-        expand, expr, false, fgrep, find, fold, fsync, grep, gunzip, gzip,
-        head, install, kill, killall, length, less, ln, login, ls, md5sum,
-        mkdir, mkfifo, mknod, mktemp, more, mv, nohup, od, patch, printenv,
-        printf, pwd, readlink, realpath, rm, rmdir, sed, seq, sh, sha1sum,
-        sha256sum, sha512sum, sleep, sort, split, strings, stty, sum, sync,
-        tac, tail, tar, tee, test, touch, tr, true, tty, uname, unexpand,
-        uniq, unix2dos, unzip, usleep, uudecode, uuencode, vi, wc, which,
-        whoami, xargs, yes, zcat</pre>
+        expand, expr, false, fgconsole, fgrep, find, fold, fsync, grep,
+        gunzip, gzip, head, install, kill, killall, length, less, ln, login,
+        ls, md5sum, mkdir, mkfifo, mknod, mktemp, more, mv, nohup, od,
+        patch, printenv, printf, pwd, readlink, realpath, rev, rm, rmdir,
+        sed, seq, sh, sha1sum, sha256sum, sha512sum, sleep, sort, split,
+        strings, stty, sum, sync, tac, tail, tar, tee, test, touch, tr,
+        true, tty, uname, unexpand, uniq, unix2dos, unxz, unzip, usleep,
+        uudecode, uuencode, vi, wc, which, whoami, xargs, xz, xzcat, yes,
+        zcat</pre>
 <p>
 </p>
 <hr />
@@ -181,7 +182,7 @@ been enabled, more detailed usage information will also be available.</p>
 <dt><strong><a name="cat" class="item"><strong>cat</strong></a></strong>
 
 <dd>
-<p>cat [-u] [FILE]...</p>
+<p>cat [FILE]...</p>
 </dd>
 </li>
 <dt><strong><a name="catv" class="item"><strong>catv</strong></a></strong>
@@ -308,7 +309,7 @@ been enabled, more detailed usage information will also be available.</p>
 <dt><strong><a name="expand" class="item"><strong>expand</strong></a></strong>
 
 <dd>
-<p>expand [-i] [-t N] [FILE|-]</p>
+<p>expand [-i] [-t N] [FILE]...</p>
 </dd>
 </li>
 <dt><strong><a name="expr" class="item"><strong>expr</strong></a></strong>
@@ -321,6 +322,12 @@ been enabled, more detailed usage information will also be available.</p>
 
 <dd>
 <p>false</p>
+</dd>
+</li>
+<dt><strong><a name="fgconsole" class="item"><strong>fgconsole</strong></a></strong>
+
+<dd>
+<p>fgconsole</p>
 </dd>
 </li>
 <dt><strong><a name="find" class="item"><strong>find</strong></a></strong>
@@ -505,6 +512,12 @@ or: mv [OPTIONS] SOURCE... DIRECTORY</p>
 <p>realpath FILE...</p>
 </dd>
 </li>
+<dt><strong><a name="rev" class="item"><strong>rev</strong></a></strong>
+
+<dd>
+<p>rev [FILE]...</p>
+</dd>
+</li>
 <dt><strong><a name="rm" class="item"><strong>rm</strong></a></strong>
 
 <dd>
@@ -655,13 +668,13 @@ or: mv [OPTIONS] SOURCE... DIRECTORY</p>
 <dt><strong><a name="unexpand" class="item"><strong>unexpand</strong></a></strong>
 
 <dd>
-<p>unexpand [-f][-a][-t N] [FILE|-]</p>
+<p>unexpand [-fa][-t N] [FILE]...</p>
 </dd>
 </li>
 <dt><strong><a name="uniq" class="item"><strong>uniq</strong></a></strong>
 
 <dd>
-<p>uniq [-fscduw]... [INPUT [OUTPUT]]</p>
+<p>uniq [-cdu][-f,s,w N] [INPUT [OUTPUT]]</p>
 </dd>
 </li>
 <dt><strong><a name="unix2dos" class="item"><strong>unix2dos</strong></a></strong>
@@ -670,10 +683,16 @@ or: mv [OPTIONS] SOURCE... DIRECTORY</p>
 <p>unix2dos [OPTIONS] [FILE]</p>
 </dd>
 </li>
+<dt><strong><a name="unxz" class="item"><strong>unxz</strong></a></strong>
+
+<dd>
+<p>unxz [OPTIONS] [FILE]...</p>
+</dd>
+</li>
 <dt><strong><a name="unzip" class="item"><strong>unzip</strong></a></strong>
 
 <dd>
-<p>unzip [-opts[modifiers]] file[.zip] [list] [-x xlist] [-d exdir]</p>
+<p>unzip [-opts[modifiers]] FILE[.zip] [LIST] [-x XLIST] [-d DIR]</p>
 </dd>
 </li>
 <dt><strong><a name="usleep" class="item"><strong>usleep</strong></a></strong>
@@ -724,10 +743,22 @@ or: mv [OPTIONS] SOURCE... DIRECTORY</p>
 <p>xargs [OPTIONS] [PROG ARGS]</p>
 </dd>
 </li>
+<dt><strong><a name="xz" class="item"><strong>xz</strong></a></strong>
+
+<dd>
+<p>xz -d [OPTIONS] [FILE]...</p>
+</dd>
+</li>
+<dt><strong><a name="xzcat" class="item"><strong>xzcat</strong></a></strong>
+
+<dd>
+<p>xzcat FILE</p>
+</dd>
+</li>
 <dt><strong><a name="yes" class="item"><strong>yes</strong></a></strong>
 
 <dd>
-<p>yes [OPTIONS] [STRING]</p>
+<p>yes [STRING]</p>
 </dd>
 </li>
 <dt><strong><a name="zcat" class="item"><strong>zcat</strong></a></strong>

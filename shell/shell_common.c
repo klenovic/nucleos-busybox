@@ -243,6 +243,7 @@ shell_builtin_read(void FAST_FUNC (*setvar)(const char *name, const char *val),
 	return retval;
 }
 
+#ifndef __nucleos__
 /* ulimit builtin */
 
 struct limits {
@@ -453,3 +454,4 @@ shell_builtin_ulimit(char **argv)
 
 	return 0;
 }
+#endif /* __nucleos__ */
