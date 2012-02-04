@@ -4,7 +4,7 @@
 <head>
 <title>BusyBox - The Swiss Army Knife of Embedded Linux</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<link rev="made" href="mailto:feedback@suse.de" />
+<link rev="made" href="mailto:none" />
 </head>
 
 <body style="background-color: white">
@@ -114,659 +114,529 @@ been enabled, more detailed usage information will also be available.</p>
 <h1><a name="commands">COMMANDS</a></h1>
 <p>Currently available applets include:</p>
 <pre>
-        [, [[, ar, ash, awk, basename, bbconfig, bunzip2, bzcat, bzip2, cal,
-        cat, catv, chgrp, chmod, chown, chroot, cksum, clear, cmp, comm, cp,
-        cpio, cut, date, dd, diff, dirname, dos2unix, echo, ed, egrep, env,
-        expand, expr, false, fgconsole, fgrep, find, fold, fsync, grep,
-        gunzip, gzip, head, install, kill, killall, length, less, ln, login,
-        ls, md5sum, mkdir, mkfifo, mknod, mktemp, more, mv, nohup, od,
-        patch, printenv, printf, pwd, readlink, realpath, rev, rm, rmdir,
-        sed, seq, sh, sha1sum, sha256sum, sha512sum, sleep, sort, split,
-        strings, stty, sum, sync, tac, tail, tar, tee, test, touch, tr,
-        true, tty, uname, unexpand, uniq, unix2dos, unxz, unzip, usleep,
-        uudecode, uuencode, vi, wc, which, whoami, xargs, xz, xzcat, yes,
-        zcat</pre>
+        [, [[, ar, ash, awk, bbconfig, bunzip2, bzcat, bzip2, cat, chgrp,
+        chmod, chown, chroot, cksum, clear, cmp, comm, cp, cpio, cut, date,
+        dd, df, diff, dirname, dos2unix, echo, ed, egrep, env, expand, expr,
+        false, fgconsole, fgrep, find, fold, fsync, grep, gunzip, gzip,
+        head, install, kill, killall, length, less, ln, ls, md5sum, mkdir,
+        mkfifo, mknod, mktemp, more, mv, nohup, od, patch, printenv, printf,
+        pwd, readlink, realpath, rev, rm, rmdir, sed, seq, sh, sha1sum,
+        sha256sum, sha512sum, sleep, smemcap, sort, split, strings, stty,
+        sum, sync, tac, tail, tar, tee, test, touch, tr, true, tty, uname,
+        unexpand, uniq, unix2dos, unxz, unzip, usleep, uudecode, uuencode,
+        vi, wc, which, xargs, xz, xzcat, zcat</pre>
 <p>
 </p>
 <hr />
 <h1><a name="command_descriptions">COMMAND DESCRIPTIONS</a></h1>
 <dl>
-<dt><strong><a name="ar" class="item"><strong>ar</strong></a></strong>
+<dt><strong><a name="ar" class="item"><strong>ar</strong></a></strong></dt>
 
 <dd>
 <p>ar [-o] [-v] [-p] [-t] [-x] ARCHIVE FILES</p>
 </dd>
-</li>
-<dt><strong><a name="awk" class="item"><strong>awk</strong></a></strong>
+<dt><strong><a name="awk" class="item"><strong>awk</strong></a></strong></dt>
 
 <dd>
 <p>awk [OPTIONS] [AWK_PROGRAM] [FILE]...</p>
 </dd>
-</li>
-<dt><strong><a name="basename" class="item"><strong>basename</strong></a></strong>
-
-<dd>
-<p>basename FILE [SUFFIX]</p>
-</dd>
-</li>
-<dt><strong><a name="bbconfig" class="item"><strong>bbconfig</strong></a></strong>
+<dt><strong><a name="bbconfig" class="item"><strong>bbconfig</strong></a></strong></dt>
 
 <dd>
 <p>bbconfig</p>
 </dd>
-</li>
-<dt><strong><a name="bunzip2" class="item"><strong>bunzip2</strong></a></strong>
+<dt><strong><a name="bunzip2" class="item"><strong>bunzip2</strong></a></strong></dt>
 
 <dd>
 <p>bunzip2 [OPTIONS] [FILE]...</p>
 </dd>
-</li>
-<dt><strong><a name="bzcat" class="item"><strong>bzcat</strong></a></strong>
+<dt><strong><a name="bzcat" class="item"><strong>bzcat</strong></a></strong></dt>
 
 <dd>
 <p>bzcat FILE</p>
 </dd>
-</li>
-<dt><strong><a name="bzip2" class="item"><strong>bzip2</strong></a></strong>
+<dt><strong><a name="bzip2" class="item"><strong>bzip2</strong></a></strong></dt>
 
 <dd>
 <p>bzip2 [OPTIONS] [FILE]...</p>
 </dd>
-</li>
-<dt><strong><a name="cal" class="item"><strong>cal</strong></a></strong>
-
-<dd>
-<p>cal [-jy] [[MONTH] YEAR]</p>
-</dd>
-</li>
-<dt><strong><a name="cat" class="item"><strong>cat</strong></a></strong>
+<dt><strong><a name="cat" class="item"><strong>cat</strong></a></strong></dt>
 
 <dd>
 <p>cat [FILE]...</p>
 </dd>
-</li>
-<dt><strong><a name="catv" class="item"><strong>catv</strong></a></strong>
-
-<dd>
-<p>catv [-etv] [FILE]...</p>
-</dd>
-</li>
-<dt><strong><a name="chgrp" class="item"><strong>chgrp</strong></a></strong>
+<dt><strong><a name="chgrp" class="item"><strong>chgrp</strong></a></strong></dt>
 
 <dd>
 <p>chgrp [-RhLHPcvf]... GROUP FILE...</p>
 </dd>
-</li>
-<dt><strong><a name="chmod" class="item"><strong>chmod</strong></a></strong>
+<dt><strong><a name="chmod" class="item"><strong>chmod</strong></a></strong></dt>
 
 <dd>
 <p>chmod [-Rcvf] MODE[,MODE]... FILE...</p>
 </dd>
-</li>
-<dt><strong><a name="chown" class="item"><strong>chown</strong></a></strong>
+<dt><strong><a name="chown" class="item"><strong>chown</strong></a></strong></dt>
 
 <dd>
 <p>chown [-RhLHPcvf]... OWNER[&lt;.|:&gt;[GROUP]] FILE...</p>
 </dd>
-</li>
-<dt><strong><a name="chroot" class="item"><strong>chroot</strong></a></strong>
+<dt><strong><a name="chroot" class="item"><strong>chroot</strong></a></strong></dt>
 
 <dd>
 <p>chroot NEWROOT [PROG ARGS]</p>
 </dd>
-</li>
-<dt><strong><a name="cksum" class="item"><strong>cksum</strong></a></strong>
+<dt><strong><a name="cksum" class="item"><strong>cksum</strong></a></strong></dt>
 
 <dd>
 <p>cksum FILES...</p>
 </dd>
-</li>
-<dt><strong><a name="clear" class="item"><strong>clear</strong></a></strong>
+<dt><strong><a name="clear" class="item"><strong>clear</strong></a></strong></dt>
 
 <dd>
 <p>clear</p>
 </dd>
-</li>
-<dt><strong><a name="cmp" class="item"><strong>cmp</strong></a></strong>
+<dt><strong><a name="cmp" class="item"><strong>cmp</strong></a></strong></dt>
 
 <dd>
 <p>cmp [-l] [-s] FILE1 [FILE2 [SKIP1 [SKIP2]]]</p>
 </dd>
-</li>
-<dt><strong><a name="comm" class="item"><strong>comm</strong></a></strong>
+<dt><strong><a name="comm" class="item"><strong>comm</strong></a></strong></dt>
 
 <dd>
 <p>comm [-123] FILE1 FILE2</p>
 </dd>
-</li>
-<dt><strong><a name="cp" class="item"><strong>cp</strong></a></strong>
+<dt><strong><a name="cp" class="item"><strong>cp</strong></a></strong></dt>
 
 <dd>
 <p>cp [OPTIONS] SOURCE DEST</p>
 </dd>
-</li>
-<dt><strong><a name="cpio" class="item"><strong>cpio</strong></a></strong>
+<dt><strong><a name="cpio" class="item"><strong>cpio</strong></a></strong></dt>
 
 <dd>
 <p>cpio [-dmvu] [-F FILE] [-ti]</p>
 </dd>
-</li>
-<dt><strong><a name="cut" class="item"><strong>cut</strong></a></strong>
+<dt><strong><a name="cut" class="item"><strong>cut</strong></a></strong></dt>
 
 <dd>
 <p>cut [OPTIONS] [FILE]...</p>
 </dd>
-</li>
-<dt><strong><a name="date" class="item"><strong>date</strong></a></strong>
+<dt><strong><a name="date" class="item"><strong>date</strong></a></strong></dt>
 
 <dd>
 <p>date [OPTIONS] [+FMT] [TIME]</p>
 </dd>
-</li>
-<dt><strong><a name="dd" class="item"><strong>dd</strong></a></strong>
+<dt><strong><a name="dd" class="item"><strong>dd</strong></a></strong></dt>
 
 <dd>
-<p><table cellspacing="0" cellpadding="0"><tr><td>dd [if=FILE] [of=FILE] [ibs=N] [obs=N] [bs=N] [count=N] [skip=N]
-<tr><td><td>[seek=N] [conv=notrunc|noerror|sync|fsync]</table></p>
+<p><table cellspacing="0" cellpadding="0"><tr><td>dd [if=FILE] [of=FILE] [bs=N] [count=N] [skip=N]
+<tr><td><td>[seek=N]</table></p>
 </dd>
-</li>
-<dt><strong><a name="diff" class="item"><strong>diff</strong></a></strong>
+<dt><strong><a name="df" class="item"><strong>df</strong></a></strong></dt>
+
+<dd>
+<p>df [-Pk] [FILESYSTEM]...</p>
+</dd>
+<dt><strong><a name="diff" class="item"><strong>diff</strong></a></strong></dt>
 
 <dd>
 <p>diff [-abBdiNqrTstw] [-L LABEL] [-S FILE] [-U LINES] FILE1 FILE2</p>
 </dd>
-</li>
-<dt><strong><a name="dirname" class="item"><strong>dirname</strong></a></strong>
+<dt><strong><a name="dirname" class="item"><strong>dirname</strong></a></strong></dt>
 
 <dd>
 <p>dirname FILENAME</p>
 </dd>
-</li>
-<dt><strong><a name="dos2unix" class="item"><strong>dos2unix</strong></a></strong>
+<dt><strong><a name="dos2unix" class="item"><strong>dos2unix</strong></a></strong></dt>
 
 <dd>
 <p>dos2unix [OPTIONS] [FILE]</p>
 </dd>
-</li>
-<dt><strong><a name="echo" class="item"><strong>echo</strong></a></strong>
+<dt><strong><a name="echo" class="item"><strong>echo</strong></a></strong></dt>
 
 <dd>
 <p>echo [-neE] [ARG]...</p>
 </dd>
-</li>
-<dt><strong><a name="ed" class="item"><strong>ed</strong></a></strong>
+<dt><strong><a name="ed" class="item"><strong>ed</strong></a></strong></dt>
 
 <dd>
 <p>ed</p>
 </dd>
-</li>
-<dt><strong><a name="env" class="item"><strong>env</strong></a></strong>
+<dt><strong><a name="env" class="item"><strong>env</strong></a></strong></dt>
 
 <dd>
 <p>env [-iu] [-] [name=value]... [PROG ARGS]</p>
 </dd>
-</li>
-<dt><strong><a name="expand" class="item"><strong>expand</strong></a></strong>
+<dt><strong><a name="expand" class="item"><strong>expand</strong></a></strong></dt>
 
 <dd>
 <p>expand [-i] [-t N] [FILE]...</p>
 </dd>
-</li>
-<dt><strong><a name="expr" class="item"><strong>expr</strong></a></strong>
+<dt><strong><a name="expr" class="item"><strong>expr</strong></a></strong></dt>
 
 <dd>
 <p>expr EXPRESSION</p>
 </dd>
-</li>
-<dt><strong><a name="false" class="item"><strong>false</strong></a></strong>
+<dt><strong><a name="false" class="item"><strong>false</strong></a></strong></dt>
 
 <dd>
 <p>false</p>
 </dd>
-</li>
-<dt><strong><a name="fgconsole" class="item"><strong>fgconsole</strong></a></strong>
+<dt><strong><a name="fgconsole" class="item"><strong>fgconsole</strong></a></strong></dt>
 
 <dd>
 <p>fgconsole</p>
 </dd>
-</li>
-<dt><strong><a name="find" class="item"><strong>find</strong></a></strong>
+<dt><strong><a name="find" class="item"><strong>find</strong></a></strong></dt>
 
 <dd>
 <p>find [PATH]... [EXPRESSION]</p>
 </dd>
-</li>
-<dt><strong><a name="fold" class="item"><strong>fold</strong></a></strong>
+<dt><strong><a name="fold" class="item"><strong>fold</strong></a></strong></dt>
 
 <dd>
 <p>fold [-bs] [-w WIDTH] [FILE]...</p>
 </dd>
-</li>
-<dt><strong><a name="fsync" class="item"><strong>fsync</strong></a></strong>
+<dt><strong><a name="fsync" class="item"><strong>fsync</strong></a></strong></dt>
 
 <dd>
 <p>fsync [OPTIONS] FILE...</p>
 </dd>
-</li>
-<dt><strong><a name="grep" class="item"><strong>grep</strong></a></strong>
+<dt><strong><a name="grep" class="item"><strong>grep</strong></a></strong></dt>
 
 <dd>
 <p>grep [-HhnlLoqvsriwFE] [-m N] [-A/B/C N] PATTERN/-e PATTERN.../-f FILE [FILE]...</p>
 </dd>
-</li>
-<dt><strong><a name="gunzip" class="item"><strong>gunzip</strong></a></strong>
+<dt><strong><a name="gunzip" class="item"><strong>gunzip</strong></a></strong></dt>
 
 <dd>
 <p>gunzip [OPTIONS] [FILE]...</p>
 </dd>
-</li>
-<dt><strong><a name="gzip" class="item"><strong>gzip</strong></a></strong>
+<dt><strong><a name="gzip" class="item"><strong>gzip</strong></a></strong></dt>
 
 <dd>
 <p>gzip [OPTIONS] [FILE]...</p>
 </dd>
-</li>
-<dt><strong><a name="head" class="item"><strong>head</strong></a></strong>
+<dt><strong><a name="head" class="item"><strong>head</strong></a></strong></dt>
 
 <dd>
 <p>head [OPTIONS] [FILE]...</p>
 </dd>
-</li>
-<dt><strong><a name="install" class="item"><strong>install</strong></a></strong>
+<dt><strong><a name="install" class="item"><strong>install</strong></a></strong></dt>
 
 <dd>
 <p>install [-cdDsp] [-o USER] [-g GRP] [-m MODE] [SOURCE]... DEST</p>
 </dd>
-</li>
-<dt><strong><a name="kill" class="item"><strong>kill</strong></a></strong>
+<dt><strong><a name="kill" class="item"><strong>kill</strong></a></strong></dt>
 
 <dd>
 <p>kill [-l] [-SIG] PID...</p>
 </dd>
-</li>
-<dt><strong><a name="killall" class="item"><strong>killall</strong></a></strong>
+<dt><strong><a name="killall" class="item"><strong>killall</strong></a></strong></dt>
 
 <dd>
 <p>killall [-l] [-q] [-SIG] PROCESS_NAME...</p>
 </dd>
-</li>
-<dt><strong><a name="length" class="item"><strong>length</strong></a></strong>
+<dt><strong><a name="length" class="item"><strong>length</strong></a></strong></dt>
 
 <dd>
 <p>length STRING</p>
 </dd>
-</li>
-<dt><strong><a name="less" class="item"><strong>less</strong></a></strong>
+<dt><strong><a name="less" class="item"><strong>less</strong></a></strong></dt>
 
 <dd>
 <p>less [-EMNmh~I?] [FILE]...</p>
 </dd>
-</li>
-<dt><strong><a name="ln" class="item"><strong>ln</strong></a></strong>
+<dt><strong><a name="ln" class="item"><strong>ln</strong></a></strong></dt>
 
 <dd>
 <p>ln [OPTIONS] TARGET... LINK|DIR</p>
 </dd>
-</li>
-<dt><strong><a name="login" class="item"><strong>login</strong></a></strong>
+<dt><strong><a name="ls" class="item"><strong>ls</strong></a></strong></dt>
 
 <dd>
-<p>login [-p] [-h HOST] [[-f] USER]</p>
+<p>ls [-1AacCdeFilnpLRrSsTtuvwxXk] [FILE]...</p>
 </dd>
-</li>
-<dt><strong><a name="ls" class="item"><strong>ls</strong></a></strong>
+<dt><strong><a name="md5sum" class="item"><strong>md5sum</strong></a></strong></dt>
 
 <dd>
-<p>ls [-1AacCdeFilnpLRrSsTtuvwxXhk] [FILE]...</p>
+<p>md5sum [OPTIONS] [FILE]...</p>
 </dd>
-</li>
-<dt><strong><a name="md5sum" class="item"><strong>md5sum</strong></a></strong>
-
-<dd>
-<p>md5sum [OPTIONS] [FILE]...
-   or: md5sum [OPTIONS] -c [FILE]</p>
-</dd>
-</li>
-<dt><strong><a name="mkdir" class="item"><strong>mkdir</strong></a></strong>
+<dt><strong><a name="mkdir" class="item"><strong>mkdir</strong></a></strong></dt>
 
 <dd>
 <p>mkdir [OPTIONS] DIRECTORY...</p>
 </dd>
-</li>
-<dt><strong><a name="mkfifo" class="item"><strong>mkfifo</strong></a></strong>
+<dt><strong><a name="mkfifo" class="item"><strong>mkfifo</strong></a></strong></dt>
 
 <dd>
 <p>mkfifo [OPTIONS] name</p>
 </dd>
-</li>
-<dt><strong><a name="mknod" class="item"><strong>mknod</strong></a></strong>
+<dt><strong><a name="mknod" class="item"><strong>mknod</strong></a></strong></dt>
 
 <dd>
 <p>mknod [OPTIONS] NAME TYPE MAJOR MINOR</p>
 </dd>
-</li>
-<dt><strong><a name="mktemp" class="item"><strong>mktemp</strong></a></strong>
+<dt><strong><a name="mktemp" class="item"><strong>mktemp</strong></a></strong></dt>
 
 <dd>
 <p>mktemp [-dt] [-p DIR] [TEMPLATE]</p>
 </dd>
-</li>
-<dt><strong><a name="more" class="item"><strong>more</strong></a></strong>
+<dt><strong><a name="more" class="item"><strong>more</strong></a></strong></dt>
 
 <dd>
 <p>more [FILE]...</p>
 </dd>
-</li>
-<dt><strong><a name="mv" class="item"><strong>mv</strong></a></strong>
+<dt><strong><a name="mv" class="item"><strong>mv</strong></a></strong></dt>
 
 <dd>
 <p>mv [OPTIONS] SOURCE DEST
 or: mv [OPTIONS] SOURCE... DIRECTORY</p>
 </dd>
-</li>
-<dt><strong><a name="nohup" class="item"><strong>nohup</strong></a></strong>
+<dt><strong><a name="nohup" class="item"><strong>nohup</strong></a></strong></dt>
 
 <dd>
 <p>nohup PROG ARGS</p>
 </dd>
-</li>
-<dt><strong><a name="od" class="item"><strong>od</strong></a></strong>
+<dt><strong><a name="od" class="item"><strong>od</strong></a></strong></dt>
 
 <dd>
 <p>od [-aBbcDdeFfHhIiLlOovXx] [-t TYPE] [FILE]</p>
 </dd>
-</li>
-<dt><strong><a name="patch" class="item"><strong>patch</strong></a></strong>
+<dt><strong><a name="patch" class="item"><strong>patch</strong></a></strong></dt>
 
 <dd>
 <p>patch [OPTIONS] [ORIGFILE [PATCHFILE]]</p>
 </dd>
-</li>
-<dt><strong><a name="printenv" class="item"><strong>printenv</strong></a></strong>
+<dt><strong><a name="printenv" class="item"><strong>printenv</strong></a></strong></dt>
 
 <dd>
 <p>printenv [VARIABLE]...</p>
 </dd>
-</li>
-<dt><strong><a name="printf" class="item"><strong>printf</strong></a></strong>
+<dt><strong><a name="printf" class="item"><strong>printf</strong></a></strong></dt>
 
 <dd>
 <p>printf FORMAT [ARGUMENT]...</p>
 </dd>
-</li>
-<dt><strong><a name="pwd" class="item"><strong>pwd</strong></a></strong>
+<dt><strong><a name="pwd" class="item"><strong>pwd</strong></a></strong></dt>
 
 <dd>
 <p>pwd</p>
 </dd>
-</li>
-<dt><strong><a name="readlink" class="item"><strong>readlink</strong></a></strong>
+<dt><strong><a name="readlink" class="item"><strong>readlink</strong></a></strong></dt>
 
 <dd>
-<p>readlink [-fnv] FILE</p>
+<p>readlink FILE</p>
 </dd>
-</li>
-<dt><strong><a name="realpath" class="item"><strong>realpath</strong></a></strong>
+<dt><strong><a name="realpath" class="item"><strong>realpath</strong></a></strong></dt>
 
 <dd>
 <p>realpath FILE...</p>
 </dd>
-</li>
-<dt><strong><a name="rev" class="item"><strong>rev</strong></a></strong>
+<dt><strong><a name="rev" class="item"><strong>rev</strong></a></strong></dt>
 
 <dd>
 <p>rev [FILE]...</p>
 </dd>
-</li>
-<dt><strong><a name="rm" class="item"><strong>rm</strong></a></strong>
+<dt><strong><a name="rm" class="item"><strong>rm</strong></a></strong></dt>
 
 <dd>
 <p>rm [OPTIONS] FILE...</p>
 </dd>
-</li>
-<dt><strong><a name="rmdir" class="item"><strong>rmdir</strong></a></strong>
+<dt><strong><a name="rmdir" class="item"><strong>rmdir</strong></a></strong></dt>
 
 <dd>
 <p>rmdir [OPTIONS] DIRECTORY...</p>
 </dd>
-</li>
-<dt><strong><a name="sed" class="item"><strong>sed</strong></a></strong>
+<dt><strong><a name="sed" class="item"><strong>sed</strong></a></strong></dt>
 
 <dd>
 <p>sed [-efinr] SED_CMD [FILE]...</p>
 </dd>
-</li>
-<dt><strong><a name="seq" class="item"><strong>seq</strong></a></strong>
+<dt><strong><a name="seq" class="item"><strong>seq</strong></a></strong></dt>
 
 <dd>
 <p>seq [-w] [-s SEP] [FIRST [INC]] LAST</p>
 </dd>
-</li>
-<dt><strong><a name="sha1sum" class="item"><strong>sha1sum</strong></a></strong>
+<dt><strong><a name="sha1sum" class="item"><strong>sha1sum</strong></a></strong></dt>
 
 <dd>
-<p>sha1sum [OPTIONS] [FILE]...
-   or: sha1sum [OPTIONS] -c [FILE]</p>
+<p>sha1sum [OPTIONS] [FILE]...</p>
 </dd>
-</li>
-<dt><strong><a name="sha256sum" class="item"><strong>sha256sum</strong></a></strong>
+<dt><strong><a name="sha256sum" class="item"><strong>sha256sum</strong></a></strong></dt>
 
 <dd>
-<p>sha256sum [OPTIONS] [FILE]...
-   or: sha256sum [OPTIONS] -c [FILE]</p>
+<p>sha256sum [OPTIONS] [FILE]...</p>
 </dd>
-</li>
-<dt><strong><a name="sha512sum" class="item"><strong>sha512sum</strong></a></strong>
+<dt><strong><a name="sha512sum" class="item"><strong>sha512sum</strong></a></strong></dt>
 
 <dd>
-<p>sha512sum [OPTIONS] [FILE]...
-   or: sha512sum [OPTIONS] -c [FILE]</p>
+<p>sha512sum [OPTIONS] [FILE]...</p>
 </dd>
-</li>
-<dt><strong><a name="sleep" class="item"><strong>sleep</strong></a></strong>
+<dt><strong><a name="sleep" class="item"><strong>sleep</strong></a></strong></dt>
 
 <dd>
 <p>sleep N</p>
 </dd>
-</li>
-<dt><strong><a name="sort" class="item"><strong>sort</strong></a></strong>
+<dt><strong><a name="smemcap" class="item"><strong>smemcap</strong></a></strong></dt>
+
+<dd>
+<p>smemcap &gt;SMEMDATA.TAR</p>
+</dd>
+<dt><strong><a name="sort" class="item"><strong>sort</strong></a></strong></dt>
 
 <dd>
 <p>sort [-nrugMcszbdfimSTokt] [-o FILE] [-k start[.offset][opts][,end[.offset][opts]] [-t CHAR] [FILE]...</p>
 </dd>
-</li>
-<dt><strong><a name="split" class="item"><strong>split</strong></a></strong>
+<dt><strong><a name="split" class="item"><strong>split</strong></a></strong></dt>
 
 <dd>
 <p>split [OPTIONS] [INPUT [PREFIX]]</p>
 </dd>
-</li>
-<dt><strong><a name="strings" class="item"><strong>strings</strong></a></strong>
+<dt><strong><a name="strings" class="item"><strong>strings</strong></a></strong></dt>
 
 <dd>
 <p>strings [-afo] [-n LEN] [FILE]...</p>
 </dd>
-</li>
-<dt><strong><a name="stty" class="item"><strong>stty</strong></a></strong>
+<dt><strong><a name="stty" class="item"><strong>stty</strong></a></strong></dt>
 
 <dd>
 <p>stty [-a|g] [-F DEVICE] [SETTING]...</p>
 </dd>
-</li>
-<dt><strong><a name="sum" class="item"><strong>sum</strong></a></strong>
+<dt><strong><a name="sum" class="item"><strong>sum</strong></a></strong></dt>
 
 <dd>
 <p>sum [-rs] [FILE]...</p>
 </dd>
-</li>
-<dt><strong><a name="sync" class="item"><strong>sync</strong></a></strong>
+<dt><strong><a name="sync" class="item"><strong>sync</strong></a></strong></dt>
 
 <dd>
 <p>sync</p>
 </dd>
-</li>
-<dt><strong><a name="tac" class="item"><strong>tac</strong></a></strong>
+<dt><strong><a name="tac" class="item"><strong>tac</strong></a></strong></dt>
 
 <dd>
 <p>tac [FILE]...</p>
 </dd>
-</li>
-<dt><strong><a name="tail" class="item"><strong>tail</strong></a></strong>
+<dt><strong><a name="tail" class="item"><strong>tail</strong></a></strong></dt>
 
 <dd>
 <p>tail [OPTIONS] [FILE]...</p>
 </dd>
-</li>
-<dt><strong><a name="tar" class="item"><strong>tar</strong></a></strong>
+<dt><strong><a name="tar" class="item"><strong>tar</strong></a></strong></dt>
 
 <dd>
 <p>tar -[cxtvO] [-X FILE] [-f TARFILE] [-C DIR] [FILE]...</p>
 </dd>
-</li>
-<dt><strong><a name="tee" class="item"><strong>tee</strong></a></strong>
+<dt><strong><a name="tee" class="item"><strong>tee</strong></a></strong></dt>
 
 <dd>
 <p>tee [OPTIONS] [FILE]...</p>
 </dd>
-</li>
-<dt><strong><a name="test" class="item"><strong>test</strong></a></strong>
+<dt><strong><a name="test" class="item"><strong>test</strong></a></strong></dt>
 
 <dd>
 <p>test EXPRESSION ]</p>
 </dd>
-</li>
-<dt><strong><a name="touch" class="item"><strong>touch</strong></a></strong>
+<dt><strong><a name="touch" class="item"><strong>touch</strong></a></strong></dt>
 
 <dd>
 <p>touch [-c] [-d DATE] FILE [FILE]...</p>
 </dd>
-</li>
-<dt><strong><a name="tr" class="item"><strong>tr</strong></a></strong>
+<dt><strong><a name="tr" class="item"><strong>tr</strong></a></strong></dt>
 
 <dd>
 <p>tr [-cds] STRING1 [STRING2]</p>
 </dd>
-</li>
-<dt><strong><a name="true" class="item"><strong>true</strong></a></strong>
+<dt><strong><a name="true" class="item"><strong>true</strong></a></strong></dt>
 
 <dd>
 <p>true</p>
 </dd>
-</li>
-<dt><strong><a name="tty" class="item"><strong>tty</strong></a></strong>
+<dt><strong><a name="tty" class="item"><strong>tty</strong></a></strong></dt>
 
 <dd>
 <p>tty</p>
 </dd>
-</li>
-<dt><strong><a name="uname" class="item"><strong>uname</strong></a></strong>
+<dt><strong><a name="uname" class="item"><strong>uname</strong></a></strong></dt>
 
 <dd>
 <p>uname [-amnrspv]</p>
 </dd>
-</li>
-<dt><strong><a name="unexpand" class="item"><strong>unexpand</strong></a></strong>
+<dt><strong><a name="unexpand" class="item"><strong>unexpand</strong></a></strong></dt>
 
 <dd>
 <p>unexpand [-fa][-t N] [FILE]...</p>
 </dd>
-</li>
-<dt><strong><a name="uniq" class="item"><strong>uniq</strong></a></strong>
+<dt><strong><a name="uniq" class="item"><strong>uniq</strong></a></strong></dt>
 
 <dd>
 <p>uniq [-cdu][-f,s,w N] [INPUT [OUTPUT]]</p>
 </dd>
-</li>
-<dt><strong><a name="unix2dos" class="item"><strong>unix2dos</strong></a></strong>
+<dt><strong><a name="unix2dos" class="item"><strong>unix2dos</strong></a></strong></dt>
 
 <dd>
 <p>unix2dos [OPTIONS] [FILE]</p>
 </dd>
-</li>
-<dt><strong><a name="unxz" class="item"><strong>unxz</strong></a></strong>
+<dt><strong><a name="unxz" class="item"><strong>unxz</strong></a></strong></dt>
 
 <dd>
 <p>unxz [OPTIONS] [FILE]...</p>
 </dd>
-</li>
-<dt><strong><a name="unzip" class="item"><strong>unzip</strong></a></strong>
+<dt><strong><a name="unzip" class="item"><strong>unzip</strong></a></strong></dt>
 
 <dd>
 <p>unzip [-opts[modifiers]] FILE[.zip] [LIST] [-x XLIST] [-d DIR]</p>
 </dd>
-</li>
-<dt><strong><a name="usleep" class="item"><strong>usleep</strong></a></strong>
+<dt><strong><a name="usleep" class="item"><strong>usleep</strong></a></strong></dt>
 
 <dd>
 <p>usleep N</p>
 </dd>
-</li>
-<dt><strong><a name="uudecode" class="item"><strong>uudecode</strong></a></strong>
+<dt><strong><a name="uudecode" class="item"><strong>uudecode</strong></a></strong></dt>
 
 <dd>
 <p>uudecode [-o OUTFILE] [INFILE]</p>
 </dd>
-</li>
-<dt><strong><a name="uuencode" class="item"><strong>uuencode</strong></a></strong>
+<dt><strong><a name="uuencode" class="item"><strong>uuencode</strong></a></strong></dt>
 
 <dd>
 <p>uuencode [-m] [INFILE] STORED_FILENAME</p>
 </dd>
-</li>
-<dt><strong><a name="vi" class="item"><strong>vi</strong></a></strong>
+<dt><strong><a name="vi" class="item"><strong>vi</strong></a></strong></dt>
 
 <dd>
 <p>vi [OPTIONS] [FILE]...</p>
 </dd>
-</li>
-<dt><strong><a name="wc" class="item"><strong>wc</strong></a></strong>
+<dt><strong><a name="wc" class="item"><strong>wc</strong></a></strong></dt>
 
 <dd>
 <p>wc [OPTIONS] [FILE]...</p>
 </dd>
-</li>
-<dt><strong><a name="which" class="item"><strong>which</strong></a></strong>
+<dt><strong><a name="which" class="item"><strong>which</strong></a></strong></dt>
 
 <dd>
 <p>which [COMMAND]...</p>
 </dd>
-</li>
-<dt><strong><a name="whoami" class="item"><strong>whoami</strong></a></strong>
-
-<dd>
-<p>whoami</p>
-</dd>
-</li>
-<dt><strong><a name="xargs" class="item"><strong>xargs</strong></a></strong>
+<dt><strong><a name="xargs" class="item"><strong>xargs</strong></a></strong></dt>
 
 <dd>
 <p>xargs [OPTIONS] [PROG ARGS]</p>
 </dd>
-</li>
-<dt><strong><a name="xz" class="item"><strong>xz</strong></a></strong>
+<dt><strong><a name="xz" class="item"><strong>xz</strong></a></strong></dt>
 
 <dd>
 <p>xz -d [OPTIONS] [FILE]...</p>
 </dd>
-</li>
-<dt><strong><a name="xzcat" class="item"><strong>xzcat</strong></a></strong>
+<dt><strong><a name="xzcat" class="item"><strong>xzcat</strong></a></strong></dt>
 
 <dd>
 <p>xzcat FILE</p>
 </dd>
-</li>
-<dt><strong><a name="yes" class="item"><strong>yes</strong></a></strong>
-
-<dd>
-<p>yes [STRING]</p>
-</dd>
-</li>
-<dt><strong><a name="zcat" class="item"><strong>zcat</strong></a></strong>
+<dt><strong><a name="zcat" class="item"><strong>zcat</strong></a></strong></dt>
 
 <dd>
 <p>zcat FILE</p>
 </dd>
-</li>
 </dl>
 <p>
 </p>
